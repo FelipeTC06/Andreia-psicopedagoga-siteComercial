@@ -1,0 +1,58 @@
+.dash-body {
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: black;
+}
+
+.content {
+    grid-area: content;
+    background-color: blue;
+}
+
+.sidenav {
+    grid-area: sidenav;
+    background-color: yellow;
+}
+
+.advert {
+    grid-area: advert;
+    background-color: red;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: purple;
+}
+
+.grid-template-areas-4 {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas:
+        "nav nav nav"
+        "sidenav content advert"
+        "footer footer footer"
+    ;
+}
+
+@media (max-width: 400px) {
+    .advert {
+        display: none;
+    }
+    .grid-template-areas-4 {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 5% 90% 5%;
+        grid-template-areas:
+            "nav nav nav"
+            "sidenav content content"
+            "footer footer footer"
+        ;
+    }
+}
